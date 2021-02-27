@@ -1,7 +1,0 @@
-# This file is created by ibus-daemon, please do not modify it.
-# This file allows processes on the machine to find the
-# ibus session bus with the below address.
-# If the IBUS_ADDRESS environment variable is set, it will
-# be used rather than this file.
-IBUS_ADDRESS=unix:abstract=/home/olga/.cache/ibus/dbus-E7m5tHLW,guid=fe41bea22d3847c6cf0d199f603881d1
-IBUS_DAEMON_PID=11316
