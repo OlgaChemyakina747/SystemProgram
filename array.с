@@ -1,0 +1,32 @@
+#include <stdio.h>
+ 
+void print_array(int *m, int k)
+{
+    int i = 0, a = 0, p;
+    for (; i < k; *m++, i++) {
+        printf("%d ", *m);
+        p = *m;
+        a = a + p;    
+    }
+    printf("\n");
+    printf ("summ = %d ", a);
+}
+ 
+void sdvig(int *m, int k)
+{
+    int i = 0;
+    for (; i < k; *m++, i++) {
+        if ((*m) & (1 << 7))
+            *m = *m >> 1;
+    }
+    printf("\n");
+}
+
+int main(void)
+{
+    int array[] = { 128, 200, 130, 4, 15, 55, 128, 25 }, size = sizeof(array) / sizeof(array[0]);
+    print_array(array, size);
+    sdvig(array, size);
+    print_array(array, size);
+    return 0;
+}
