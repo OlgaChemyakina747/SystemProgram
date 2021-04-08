@@ -1,0 +1,9 @@
+FROM amazonlinux
+WORKDIR /home
+COPY ./lab4.c .
+RUN yum install -y gcc
+RUN yum install -y nano
+RUN yum install -y gdb
+RUN yum install -y procps
+RUN gcc lab4.c -o main
+ENTRYPOINT /bin/bash
